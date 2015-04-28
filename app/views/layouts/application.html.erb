@@ -8,16 +8,17 @@
 </head>
 <body>
 <%= render "layouts/header" %>
-<div class="container">
 
-	<% flash.each do |type, message| %>
+<% flash.each do |type, message| %>
 	<div class="alert alert-info fade-in">
-	<button class="close" data-dismiss="alert">x</button>
-	<%= message %>
+		<button class="close" data-dismiss="alert">x</button>
+		<%= message %>
 	</div>
-	<% end %>
+<% end %>
 
+<div class="container">
 	<%= yield %>
 </div>
+
 </body>
 </html>
